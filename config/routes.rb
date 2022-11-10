@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :budgets
+  resources :homes
+  resources :line_items
   resources :users
   resources :products
   resources :categories
