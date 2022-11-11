@@ -10,19 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2022_11_04_191341) do
+ActiveRecord::Schema.define(version: 2022_11_10_182438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
+  create_table "budgets", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
-    t.string "lastname"
-    t.integer "phone"
-    t.string "address"
-    t.string "email"
-    t.date "fecha_nac"
+    t.date "expiration_date"
+    t.date "create_date"
+    t.integer "quantity_products"
+    t.integer "total_budget"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_budgets_on_user_id"
@@ -30,7 +29,23 @@ ActiveRecord::Schema.define(version: 2022_11_04_191341) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-  end 
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.bigint "product_id"
+    t.integer "quantity"
+    t.integer "totalprice"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_line_items_on_product_id"
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -42,5 +57,18 @@ ActiveRecord::Schema.define(version: 2022_11_04_191341) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
-  add_foreign_key "products", "categories", "users"
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "lastname"
+    t.integer "phone"
+    t.string "address"
+    t.string "email"
+    t.date "fecha_nac"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "budgets", "users"
+  add_foreign_key "line_items", "products"
+  add_foreign_key "products", "categories"
 end
