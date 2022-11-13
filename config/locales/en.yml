@@ -30,4 +30,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+    attributes:
+      user:
+        name: 'Nombre'
+        lastname: 'Apellido'
+        phone: 'Telefono'
+        address: 'Direccion'
+        email: 'Email'
+        fecha_nac: 'Fecha de nacimiento'
+  users:
+    new:
+      new_user: 'Nuevo Usuario'
+    edit:
+      edit_user: 'Editar Usuario'
+  common:
+    destroy: "El usuario se elimino correctamente amigo"
+    update: "usuario se ah actualizad"
+    create: "Se  creo con exito" 
+    back: 'atras'
+    edit: 'Editar'
+    destroy: 'Borrar'
+    show: 'Mostrar'
