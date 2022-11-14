@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name,t('name') %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :lastname %>
+    <%= form.label :lastname,t('lastname') %>
     <%= form.text_field :lastname %>
   </div>
 
@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :fecha_nac %>
-    <%= form.date_select :fecha_nac %>
+    <%= form.date_field :fecha_nac %>
   </div>
 
   <div class="actions">
