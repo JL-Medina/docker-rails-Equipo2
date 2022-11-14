@@ -32,14 +32,29 @@
 es:
   activerecord:
     models:
+      budget:
+        one: producto
+        other: productos
+      line_item:
+        one: pack
+      product:
+        one: producto
+        other: productos
       user:
         one: Usuario
         other: Usuarios
+     
   name: Nombre
-  lastname: Segundo nombre
-  
-  
-  
+  lastname: Apellido
+  phone: Telefono
+  address: Direccion
+  email: Email
+  fecha_nac: Fecha de Nacimiento
+  user_id: Usuario
+  expiration_date: Fecha de expiracion
+  create_date: Fecha de creacion  
+  quantity_products: Cantidad productos
+  total_budget: Precio total del presupuesto
   users:
     new:
       new_user: 'Nuevo Usuario'
