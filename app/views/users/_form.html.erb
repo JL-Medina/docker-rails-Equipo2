@@ -22,22 +22,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label :phone,t('phone') %>
     <%= form.number_field :phone %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
+    <%= form.label :address,t('address') %>
     <%= form.text_field :address %>
   </div>
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.email_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :fecha_nac %>
+    <%= form.label :fecha_nac,t('fecha_nac') %>
     <%= form.date_field :fecha_nac %>
   </div>
 

@@ -32,25 +32,55 @@
 es:
   activerecord:
     models:
+      budget:
+        one: Presupuesto
+        other: Presupuestos
+      line_item:
+        one: pack
+      product:
+        one: producto
+        other: productos
       user:
         one: Usuario
         other: Usuarios
+     
   name: Nombre
-  lastname: Segundo nombre
+  lastname: Apellido
+  phone: Telefono
+  address: Direccion
+  email: Email
+  fecha_nac: Fecha de Nacimiento
+  user_id: Usuario
+  expiration_date: Fecha de expiracion
+  create_date: Fecha de creacion  
+  quantity_products: Cantidad productos
+  total_budget: Precio total del presupuesto
+  product_id: Producto
+  quantity: Cantidad
+  totalprice: Precio total
+  price: Precio
+  description: Descripción
+  category_id: Categoría
+  fecha_nac: Fecha de nacimiento
   
+  common:
+    destroy: "El usuario se elimino correctamente amigo"
+    update: "usuario se ah actualizad"
+    create: "Se  creo con exito" 
+    back: 'Atras'
+    edit: 'Editar'
+    destroy: 'Borrar'
+    show: 'Mostrar'
   
-  
+  budgets:
+    new:
+      new_budget: 'Nuevo Presupuesto'
+    edit:
+      edit_budget: 'Editar Presupuesto'
+
   users:
     new:
       new_user: 'Nuevo Usuario'
     edit:
       edit_user: 'Editar Usuario'
-  common:
-    destroy: "El usuario se elimino correctamente amigo"
-    update: "usuario se ah actualizad"
-    create: "Se  creo con exito" 
-    back: 'atras'
-    edit: 'Editar'
-    destroy: 'Borrar'
-    show: 'Mostrar'
  
