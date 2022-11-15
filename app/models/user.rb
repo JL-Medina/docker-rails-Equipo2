@@ -20,7 +20,7 @@ class User < ApplicationRecord
       [^\s@]* # 0 or more non-at-sign characters, accepts any number of periods
       .      # period
       [^\s@]* # 0 or more non-at-sign characters, accepts any number of periods
-  [^\s.@] # non-at-sign and non-period character
+      [^\s.@] # non-at-sign and non-period character
       \z/x
 
 
