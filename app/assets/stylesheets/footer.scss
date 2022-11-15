@@ -1,0 +1,126 @@
+:root{
+    --VioletaClaro: #727BFF;
+    --VioletaOscuro: #214FFC;
+}
+footer{
+    min-height: 665px;
+    max-height: 766px;
+}
+section{
+    max-width: 1110px;
+    justify-content: center;
+}
+.Suscripcion{
+    max-width: 425px;
+    max-height: 40px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-color: var(--VioletaClaro);
+}
+.MailInput{
+  width: 100%;
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.explicacion{
+    font-size: 12px;
+    justify-content: center;
+    color: black;
+}
+.SubmitSuscription {
+    float: right;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+
+}
+.ArrowRight {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 200,
+    'opsz' 48;
+  color: var(--VioletaClaro);
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  
+  }
+.DataFiscal{
+    height: 129px;
+    width: 94px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    max-width: 539px;
+    min-height: 40px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-top: 8px;
+    border-radius: 0px;
+}
+.dropdown{
+    margin-top: 16px;
+    border-bottom-style: hidden;
+    border: solid;
+    border-color: var(--VioletaClaro);
+}
+.Desplegable{
+    display: inline-flex;
+    justify-content: space-between;
+    border: 0px;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+    @media screen and (min-width : 360px) and (max-width:768px){
+      footer{  background-color: white;
+      }
+      .Desplegable{  background-color: white;
+      }
+    }
+    @media screen and (min-width : 769px){
+      footer{  background-color: #E8DBFF ;
+      }
+      .Desplegable{  background-color: #E8DBFF ;
+      }
+      .MailInput{  background-color: #E8DBFF ;
+      }
+    }
+    
+    @media screen and (min-width : 360px) and (max-width:768px){
+        footer{  margin: 16px;
+        }
+        .RedesSociales{ margin: 16px;
+        }
+        .btn{    margin-left: 16px;
+            margin-right: 16px;
+        }
+        .dropdown{    margin-left: 16px;
+            margin-right: 16px;
+        }
+      }
+      @media screen and (min-width : 769px){
+        section{ padding-top: 56px;
+                 margin: 0 auto;
+        }
+        .explicacion{    margin-top: 56px;
+        }
+        .DataFiscal{    margin-top: 48px;
+        }
+        .row{    justify-content: space-between;
+        }
+        .Contacto{    max-width: 445px;;
+        }
+      }
