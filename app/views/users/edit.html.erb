@@ -1,0 +1,6 @@
+<h1><%=t('.edit_user') %></h1>
+
+<%= render 'form', user: @user %>
+
+<%= link_to t('common.show'), @user %> |
+<%= link_to t('common.back'), users_path %>
