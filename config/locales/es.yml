@@ -35,38 +35,39 @@ es:
       budget:
         one: Presupuesto
         other: Presupuestos
+      category:
+        one: Categoría
       line_item:
-        one: pack
+        one: Pack
       product:
-        one: producto
-        other: productos
+        one: Producto
+        other: Productos
       user:
         one: Usuario
         other: Usuarios
-     
-  name: Nombre
-  lastname: Apellido
-  phone: Telefono
-  address: Direccion
+
+  address: Dirección
+  category_id: Categoría
+  create_date: Fecha de creación
+  description: Descripción  
   email: Email
+  expiration_date: Fecha de expiración
   fecha_nac: Fecha de Nacimiento
-  user_id: Usuario
-  expiration_date: Fecha de expiracion
-  create_date: Fecha de creacion  
-  quantity_products: Cantidad productos
-  total_budget: Precio total del presupuesto
+  lastname: Apellido
+  name: Nombre
+  phone: Telefono
+  price: Precio
   product_id: Producto
   quantity: Cantidad
+  quantity_products: Cantidad de productos
   totalprice: Precio total
-  price: Precio
-  description: Descripción
-  category_id: Categoría
-  fecha_nac: Fecha de nacimiento
+  total_budget: Precio total del presupuesto
+  user_id: Usuario
   
   common:
-    destroy: "El usuario se elimino correctamente amigo"
-    update: "usuario se ah actualizad"
-    create: "Se  creo con exito" 
+    destroy: "Se eliminó correctamente"
+    update: "Actualizado"
+    create: "Creado con exito" 
     back: 'Atras'
     edit: 'Editar'
     destroy: 'Borrar'
@@ -78,6 +79,24 @@ es:
     edit:
       edit_budget: 'Editar Presupuesto'
 
+  line_items:
+      new:
+        new_line_item: 'Nuevo pack'
+      edit:
+        edit_line_item: 'Editar Pack'
+
+  categories:
+      new:
+        new_category: 'Nueva categoria'
+      edit:
+        edit_category: 'Editar categoria'
+
+  products:
+      new:
+        new_product: 'Nuevo Producto'
+      edit:
+        edit_product: 'Editar Producto'
+        
   users:
     new:
       new_user: 'Nuevo Usuario'
