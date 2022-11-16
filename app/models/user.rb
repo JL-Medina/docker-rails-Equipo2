@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
 
 
-  validates :name , :lastname, :email,   presence: true
+  #validates :name , :lastname, :email,   presence: true
   validates :email  , uniqueness: {case_insensitive: false}
   validate :due_date_validity
 
