@@ -1,3 +1,113 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.product-card {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px;
+    font-family: 'Barlow';
+    padding: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+}
+
+
+.product-card p {
+    font-family: 'Barlow';
+    padding-top: 5px;
+}
+
+
+.product-card img {
+    width: 100%;
+
+}
+
+.top-div {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.middle-div {
+    
+}
+
+.bottom-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+
+.product-sell-status {
+    font-weight: 400;
+    font-size: 12.8px;
+    color: #5FB065;
+}
+
+.product-name {
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+}
+
+.bottom-div-divider {
+    color: black;
+}
+
+.product-color {
+    font-weight: 400;
+    color: black;
+
+}
+
+.product-shipping-status {
+    font-weight: 400;
+    color: #AE946D;
+
+}
+
+/* botones */
+
+button {
+    width: 100%;
+    height: 36px;
+}
+
+.buy-button {
+    width: 100%;
+    background-color: white;
+    color: #3860BE;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #3860BE;
+    margin-top: 5px;
+}
+
+.add-button{
+    width: 100%;
+    background-color: #3860BE;
+    color: white;
+    border-style: solid;
+    margin-top: 5px;
+}
+
+button:active {
+    border-style: none;
+} 

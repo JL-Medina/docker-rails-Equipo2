@@ -7,7 +7,7 @@
 
 
 p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
      color: white;
      margin: 0 !important ; 
 }
@@ -24,7 +24,7 @@ p {
 }
 
 .presupuestos-div p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
      color: white;
      font-size: 2rem;
 }
@@ -43,7 +43,7 @@ p {
 }
 
 .presupuestos-div-desktop  p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
      color: white;
 
 }
@@ -73,8 +73,13 @@ p {
 
 .logo-div-desktop p {
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
 
+}
+
+.logo-div-desktop div {
+    padding-left: 20px;
 }
 
 .logo-div-desktop input {
@@ -86,7 +91,7 @@ p {
 }
 
 .info-div-desktop {
-    background-color: #696965;
+    background-color: #AE946D;
     height: 51px;
     display: flex;
     justify-content: center;
@@ -98,9 +103,10 @@ p {
 }
 
 .info-div-desktop p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     color: white;
     font-size: 1rem;
+    text-decoration: underline;
 
 }
 
@@ -118,7 +124,7 @@ p {
 }
 
 .info-div-mobile p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
     color: white;
     font-size: 2rem;
 
