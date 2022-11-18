@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
+  root to: 'homes#index'
   devise_for :views
   devise_for :users
   resources :budgets
-  resources :homes
   resources :line_items
   resources :users
   resources :products

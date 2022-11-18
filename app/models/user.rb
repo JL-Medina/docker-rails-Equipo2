@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   #validates :name , :lastname, :email,   presence: true
   validates :email  , uniqueness: {case_insensitive: false}
-  validate :due_date_validity
+  validate :birth_date_validity
   
   EMAIL_REGEX = /\A
       [^\s@]+ # non-at-sign characters, at least one
