@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @line_item.product %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @line_item.quantity %>
+</p>
+
+<p>
+  <strong>Totalprice:</strong>
+  <%= @line_item.totalprice %>
+</p>
+
+<%= link_to t('common.edit'), edit_line_item_path(@line_item) %> |
+<%= link_to t('common.back'), line_items_path %>
