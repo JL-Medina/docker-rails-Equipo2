@@ -32,27 +32,27 @@ class User < ApplicationRecord
     errors.add :fecha_nac 
   end
   
-  def authenticate_user!(opts={})
-    if user_signed_in?
-      super 
-    else
-      if controller_name == "invitations" && (action_name == "edit" || action_name == "update" )
-        super
-      else
-        if params[:red].present?
-          if is_ignored_back_url_action?
-            super
-          else
-            redirect_to new_user_session_path(red: params[:red],back_url: back_url)
-          end
-        else
-          if is_ignored_back_url_action?
-            super
-          else
-            redirect_to new_user_session_path(back_url: back_url)
-          end
-        end
-      end
-    end
-  end
+  # def authenticate_user!(opts={})
+  #   if user_signed_in?
+  #     super 
+  #   else
+  #     if controller_name == "invitations" && (action_name == "edit" || action_name == "update" )
+  #       super
+  #     else
+  #       if params[:red].present?
+  #         if is_ignored_back_url_action?
+  #           super
+  #         else
+  #           redirect_to new_user_session_path(red: params[:red],back_url: back_url)
+  #         end
+  #       else
+  #         if is_ignored_back_url_action?
+  #           super
+  #         else
+  #           redirect_to new_user_session_path(back_url: back_url)
+  #         end
+  #       end
+  #     end
+  #   end
+  # end
 end
