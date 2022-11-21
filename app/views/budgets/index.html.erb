@@ -24,9 +24,9 @@
         <td><%= budget.create_date %></td>
         <td><%= budget.quantity_products %></td>
         <td><%= budget.total_budget %></td>
-        <td><%= link_to 'Show', budget %></td>
-        <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
-        <td><%= link_to 'Destroy', budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('common.show'), budget %></td>
+        <td><%= link_to t('common.edit'), edit_budget_path(budget) %></td>
+        <td><%= link_to t('common.destroy'), budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Budget', new_budget_path %>
+<%= link_to t('new.new_budget'), new_budget_path %>

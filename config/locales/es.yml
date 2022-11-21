@@ -1,2 +1,105 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
 es:
+  activerecord:
+    models:
+      budget:
+        one: Presupuesto
+        other: Presupuestos
+      category:
+        one: Categoría
+      line_item:
+        one: Pack
+      product:
+        one: Producto
+        other: Productos
+      user:
+        one: Usuario
+        other: Usuarios
+
+  address: Dirección
+  category_id: Categoría
+  create_date: Fecha de creación
+  description: Descripción  
+  email: Email
+  expiration_date: Fecha de expiración
+  fecha_nac: Fecha de Nacimiento
+  lastname: Apellido
+  name: Nombre
+  phone: Telefono
+  price: Precio
+  product_id: Producto
+  quantity: Cantidad
+  quantity_products: Cantidad de productos
+  totalprice: Precio total
+  total_budget: Precio total del presupuesto
+  user_id: Usuario
   
+  common:
+    destroy: "Se eliminó correctamente"
+    update: "Actualizado"
+    create: "Creado con exito" 
+    back: 'Atras'
+    edit: 'Editar'
+    destroy: 'Borrar'
+    show: 'Mostrar'
+  
+  budgets:
+    new:
+      new_budget: 'Nuevo Presupuesto'
+    edit:
+      edit_budget: 'Editar Presupuesto'
+
+  line_items:
+      new:
+        new_line_item: 'Nuevo pack'
+      edit:
+        edit_line_item: 'Editar Pack'
+
+  categories:
+      new:
+        new_category: 'Nueva categoria'
+      edit:
+        edit_category: 'Editar categoria'
+
+  products:
+      new:
+        new_product: 'Nuevo Producto'
+      edit:
+        edit_product: 'Editar Producto'
+        
+  users:
+    new:
+      new_user: 'Nuevo Usuario'
+    edit:
+      edit_user: 'Editar Usuario'
+ 
