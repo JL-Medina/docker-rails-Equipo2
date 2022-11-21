@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :product_id, t('product_id')%>
-    <%= form.text_field :product_id %>
+  <%= form.select :product_id, Product.all.map{|prod| [prod.name,prod.id]}%>
   </div>
 
   <div class="field">
