@@ -2,36 +2,9 @@
 
 <%= render :partial => 'header.html.erb' %>
 
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-    </div>
-    <div class="swiper-slide">
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-    </div>
-    <div class="swiper-slide">
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-    </div>
-  </div>
+<%= render :partial => 'slider-popular.html.erb' %>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-</div>
+<%= render :partial => 'slider-accesories.html.erb' %>
 
 <%= render :partial => 'footer.html.erb' %>
 
@@ -86,4 +59,23 @@ const swiper = new Swiper('.swiper', {
 
 
 </style>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
 
