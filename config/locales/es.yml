@@ -55,6 +55,11 @@ es:
   fecha_nac: Fecha de Nacimiento
   lastname: Apellido
   name: Nombre
+  name_budget: Presupuestos
+  name_category: Categorías
+  name_line_item: Pack de productos
+  name_products: Productos
+  name_user: Usuarios
   phone: Telefono
   price: Precio
   product_id: Producto
