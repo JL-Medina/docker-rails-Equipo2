@@ -9,21 +9,27 @@
     <!-- Slides -->
     <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-
     </div>
     <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-
     </div>
     <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
-
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
     </div>
   </div>
 
@@ -38,7 +44,14 @@
 const swiperAcc = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-  
+  slidesPerView: 1,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 600px
+    600: {
+      slidesPerView: 3,
+    }
+  }
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',

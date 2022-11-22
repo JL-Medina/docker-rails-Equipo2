@@ -15,7 +15,8 @@ body {
 
 
 .product-card {
-    height: 300px;
+    height: auto;
+    width: 300px;
     background-color: white;
     border-radius: 8px;
     font-family: 'Barlow';
@@ -28,11 +29,21 @@ body {
 
 }
 
-@media (min-width : 992px) {
+@media (min-width : 600px) {
     .product-card {
         height: 431px;
         width: 255px;
         max-height: 431px;
+        max-height: 431px;
+        background-color: white;
+        border-radius: 8px;
+        font-family: 'Barlow';
+        padding: 12px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
    
 }
@@ -123,6 +134,9 @@ button {
     border-style: solid;
     margin-top: 5px;
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:active {

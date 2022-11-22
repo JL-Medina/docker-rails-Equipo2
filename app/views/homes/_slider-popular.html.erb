@@ -12,7 +12,6 @@
     </div>
     <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
-
     </div>
     <div class="swiper-slide">
       <div class="product-card-container"><%= render :partial => 'products.html.erb' %></div>
@@ -52,9 +51,15 @@
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  loop: true,
-  slidesPerView: 4,
-  spaceBetween: 10,
+    loop: true,
+    slidesPerView: 1,
+    breakpoints: {
+    // when window width is >= 600px
+    600: {
+      slidesPerView: 4,
+    }
+    }
+
   
   // If we need pagination
   pagination: {
@@ -77,13 +82,13 @@ const swiper = new Swiper('.swiper', {
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
 }
 
 .swiper-wrapper {
-  width: 100%; 
+  width: 90%; 
 }
 
 
