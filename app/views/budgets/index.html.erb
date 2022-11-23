@@ -18,7 +18,7 @@
   <tbody>
     <% @budgets.each do |budget| %>
       <tr>
-        <td><%= budget.user %></td>
+        <td><%= budget.user.name %></td>
         <td><%= budget.name %></td>
         <td><%= budget.expiration_date %></td>
         <td><%= budget.create_date %></td>
