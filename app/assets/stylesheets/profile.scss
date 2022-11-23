@@ -1,0 +1,84 @@
+
+h1 {
+    font-family: 'Barlow';
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    margin-top: 50px;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10%;
+    width: 90%;
+    
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: auto;
+    margin-left: 20px;
+    width: 10%;
+    
+}
+
+button {
+    background-color: #3860BE;
+    width: 92%;
+    height: 32px;
+    color: white;
+    align-items: center;
+}
+
+.edit-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.user-data-info {
+
+    font-family: 'Barlow';
+    color: black;
+    padding-left: 25px;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 26px;
+
+}
+
+
+
+.welcome-div {
+    display: flex;
+    justify-content: start;
+
+}
+
+.welcome-div img {
+    border-radius: 100px;
+    height: 72px;
+    margin-left: 20px;
+
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+
+}
