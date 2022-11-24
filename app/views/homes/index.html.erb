@@ -10,6 +10,8 @@
 
 <%= render :partial => 'profile.html.erb' %>
 
+<%= render :partial => 'users/login.html.erb' %>
+
 
 
 
@@ -18,6 +20,7 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
+  slidesPerView: 4,
   
   // If we need pagination
   pagination: {
@@ -32,10 +35,14 @@ const swiper = new Swiper('.swiper', {
 
 });
 </script>
+
 <style>
 
 .swiper {
-  width: 90%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+
 
 }
 
@@ -47,15 +54,18 @@ const swiper = new Swiper('.swiper', {
 
 .swiper-wrapper {
   width: 100%; 
+
 }
 
 
 .swiper-button-next {
   color: black;
+  margin-right: -10px
 }
 
 .swiper-button-prev {
   color: black;
+  margin-left: -10px
 }
 
 
