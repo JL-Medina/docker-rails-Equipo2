@@ -2,9 +2,13 @@
     --VioletaClaro: #727BFF;
     --VioletaOscuro: #214FFC;
 }
+*{
+  box-sizing: border-box;
+}
 footer{
     min-height: 665px;
     max-height: 766px;
+    margin: 0px;
 }
 section{
     max-width: 1110px;
@@ -18,10 +22,10 @@ section{
     align-items: center;
     justify-content: space-between;
     border: solid;
-    border-color: var(--VioletaClaro);
+    border-color: #ffffff;
 }
 .MailInput{
-  width: 100%;
+     width: 100%;
     border-top-style: hidden;
     border-bottom-style: hidden;
     border-left-style: hidden;
@@ -30,6 +34,7 @@ section{
     margin-left: 8px;
     margin-top: 8px;
     margin-bottom: 8px;
+    background-color: #111111;
 }
 .explicacion{
     font-size: 12px;
@@ -41,6 +46,7 @@ section{
     margin-right: 8px;
     width: 24px;
     height: 24px;
+    color: #ffffff;
 
 }
 .ArrowRight {
@@ -49,7 +55,6 @@ section{
     'wght' 300,
     'GRAD' 200,
     'opsz' 48;
-  color: var(--VioletaClaro);
   padding-right: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -58,22 +63,33 @@ section{
 .DataFiscal{
     height: 129px;
     width: 94px;
-}
-.btn{
     display: flex;
-    align-items: center;
+    margin: 0 auto;
+}
+button .btn-link{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
     max-width: 539px;
     min-height: 40px;
     justify-content: space-between;
     border-bottom: 1px solid black;
     margin-top: 8px;
     border-radius: 0px;
+    color: #ffffff;
+}
+.Contacto{
+    max-width: 445px;
+    align-items: center;
+}
+.RedesSociales{
+    width: 100%;
 }
 .dropdown{
-    margin-top: 16px;
-    border-bottom-style: hidden;
+    margin-top: 1rem;
     border: solid;
-    border-color: var(--VioletaClaro);
+    border-color: #ffffff;
+    margin-bottom: 1rem;
 }
 .Desplegable{
     display: inline-flex;
@@ -82,25 +98,34 @@ section{
     padding: 8px;
     width: 100%;
     text-align: left;
+    color: #ffffff;
+}
+.marca{
+    width: 100%;
+    align-items: center;
+        color: #ffffff;
+}
+.material-symbols-outlined{
+        color: #ffffff;
 }
 
     @media screen and (min-width : 360px) and (max-width:768px){
-      footer{  background-color: white;
+      footer{  background-color: #111111;
       }
-      .Desplegable{  background-color: white;
+      .Desplegable{  background-color: #111111;
       }
     }
     @media screen and (min-width : 769px){
-      footer{  background-color: #E8DBFF ;
+      footer{  background-color: #111111 ;
       }
-      .Desplegable{  background-color: #E8DBFF ;
+      .Desplegable{  background-color: #111111 ;
       }
-      .MailInput{  background-color: #E8DBFF ;
+      .MailInput{  background-color: #111111 ;
       }
     }
     
     @media screen and (min-width : 360px) and (max-width:768px){
-        footer{  margin: 16px;
+        footer{  padding: 16px;
         }
         .RedesSociales{ margin: 16px;
         }
