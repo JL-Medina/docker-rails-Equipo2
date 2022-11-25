@@ -3,7 +3,7 @@
 <p class='section-title'>PRODUCTOS POPULARES<p>
 
 <!-- Slider main container -->
-<div class="swiper">
+<div class="swiper swiper-popular">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -49,18 +49,16 @@
 
 <script>
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper-popular', {
   // Optional parameters
-    loop: true,
-    
-    slidesPerView: 1,
-    breakpoints: {
+  loop: true,
+  slidesPerView: 1,
+  breakpoints: {
     // when window width is >= 600px
     600: {
       slidesPerView: 4,
-
-    }
-    }
+    },
+  },
 
   
   // If we need pagination
