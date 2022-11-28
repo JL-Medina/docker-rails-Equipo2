@@ -21,7 +21,7 @@
         <td><%= product.description %></td>
         <td><%= product.category.name %></td>
         <td><%=number_field_tag :quantity, 0, min: 0, step: 1, id: "quantity_id_#{product.id}"%></td>
-        <td><%= link_to 'Add to budget', "#",onclick: "addProduct(#{product.id})" %></td>
+        <td data-toggle="modal" data-target="#modal"><%= link_to 'Add to budget', "#",onclick: "addProduct(#{product.id}, #{product.price})"%></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -34,18 +34,52 @@
 
 <%= link_to t('new.new_product'), new_product_path %>
 
+<div class="modal" id="modal">
+  <h2 class="fs-5">Popover in a modal</h2>
+  <p>This <a href="#" role="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+  <hr>
+  <h2 class="fs-5">Tooltips in a modal</h2>
+  <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+</div>
+
 <script>
+
+  
   function newBudget (){
     
-
+    // const modal = document.querySelector('#modal');
+    // const openModal = document.querySelector('.open-button');
+    // const closeModal = document.querySelector('.close-button');
+    // openModal.addEventListener('click', () => {
+    //   modal.showModal();
+    //})
 
   }
-  function addProduct(product_id) {
+  function addProduct(product_id, price) {
+    const modal = document.getElementById('modal');
     var quantity = document.getElementById("quantity_id_" + product_id).value;
+    
+
+    //$('#modal').modal('show');
     
     if (quantity != 0)
     {
-      
+      //$('#modal').modal('show');
+      console.log(price)
+      console.log(quantity)
+      totalPrice = price * quantity
+      console.log (totalPrice) 
+      // $.ajax({
+      //   type: "",
+      //   url: "<%=add_product_path%>",
+      //   data: (budget_select.value == "N") ? data 
+      //   :
+      //    data2,
+      //       success(result){
+      //         $
+      //       }
+
+      // })
     }
     
   }

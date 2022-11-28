@@ -22,8 +22,6 @@ class BudgetsController < ApplicationController
   # POST /budgets or /budgets.json
   def create
     @budget = Budget.new(budget_params)
-    
-
     respond_to do |format|
       if @budget.save
         format.html { redirect_to budget_url(@budget), notice: t('common.create') }
@@ -33,6 +31,15 @@ class BudgetsController < ApplicationController
         format.json { render json: @budget.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def add_product
+    if params[:id].present?    
+      @budget = Budget.find(params[:id])   
+    else
+      @budget = Budget.new(budget_params)
+    end
+    @line_item = LineItem.new()
   end
 
   # PATCH/PUT /budgets/1 or /budgets/1.json
