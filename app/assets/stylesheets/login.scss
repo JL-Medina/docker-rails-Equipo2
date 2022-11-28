@@ -14,20 +14,24 @@
     background-color: var(--NegroPuma);
     border-radius: 8px;
     margin:  0 auto;
+    font-family: 'Barlow', sans-serif;
 }
 .titulo{
     text-align: center;
     color: var(--BlancoPuma);
-    padding-top: 2rem;
+    padding-top: 30px;
     padding-bottom: 1rem;
     margin: 0;
     font-size: 1rem;
+    font-weight: 600;
     margin-top: 1rem;
 }
 .mail{
     color: var(--BlancoPuma);
     font-size: 1rem;
+    font-weight: 600;
     margin-left: 1rem;
+    margin-bottom: 0px;
 
     }
 .Mailnput{
@@ -43,10 +47,13 @@
     margin-top: 1rem;
     padding: 0.5rem;
 }
+.container-checkbox{
+    margin-bottom: 0px;
+}
 .form-check{
     padding-left: 17px;
-    margin-bottom: 22px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 8px;
     color: var(--BlancoPuma);
     }
 
@@ -81,6 +88,11 @@
 .separador{
     display: flex;
     margin-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
 }
 .texto-separador{
     color: var(--BlancoPuma);
@@ -93,6 +105,7 @@
     background-color: var(--BlancoPuma) ;
     height: 1px;
     width: 73px;
+    margin-bottom: 10px;
   }
 .boton-google{
     width: 100%;
@@ -109,17 +122,19 @@
  color: var(--NegroPuma);
  background-color: var(--BlancoPuma);
  border-radius: 4px;
+ align-items: center;
+ pointer-events: none;
 }
 .google-logo{
-margin-right: 32px;
+width: 32px;
+height: 32px;
 margin-left: 1rem;
-margin-top: 5.5px;
-margin-bottom: 5.5px;
+margin-right: 2rem;
 }
 .registro1{
-    font-size: 1rem;
-    margin-top: 12.3px;
-    margin-bottom: 12.3px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111111;
 }
 .boton-facebook{
     width: 100%;
@@ -127,24 +142,27 @@ margin-bottom: 5.5px;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 1rem;
+    pointer-events: none;
   }
 .btn-facebook{
  height: 43px;
  display: flex;
  text-decoration: none;
- font-size: 1rem;
+ font-size: 13px;
+ font-weight: 600;
  color: var(--BlancoPuma);
  background-color: var(--Secundario);
  border-radius: 4px;
+ align-items: center;
 }
 .facebook-logo{
-margin-right: 32px;
-margin-left: 1rem;
-margin-top: 5.5px;
-margin-bottom: 5.5px;
+    width: 32px;
+    height: 32px;
+    margin-left: 1rem;
+    margin-right: 2rem;
 }
 .registro2{
-    font-size: 1rem;
+    font-size: 13px;
     margin-top: 12.3px;
     margin-bottom: 12.3px;
 }
