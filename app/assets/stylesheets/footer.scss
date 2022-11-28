@@ -1,7 +1,3 @@
-:root{
-    --VioletaClaro: #727BFF;
-    --VioletaOscuro: #214FFC;
-}
 *{
   box-sizing: border-box;
 }
@@ -9,8 +5,9 @@ footer{
     min-height: 665px;
     max-height: 766px;
     margin: 0px;
+    font-family: 'Barlow', sans-serif;
 }
-section{
+.section1{
     max-width: 1110px;
     justify-content: center;
 }
@@ -39,7 +36,22 @@ section{
 .explicacion{
     font-size: 12px;
     justify-content: center;
-    color: black;
+    color: #ffffff;
+}
+.botones-primarios{
+  padding-left: 0px;
+}
+.contenedor-boton{
+  border-bottom: solid 1px #ffffff;
+}
+.imagen-redes{
+  width: 28px;
+  height: 28px;
+}
+.fotos-redes{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .SubmitSuscription {
     float: right;
@@ -66,17 +78,17 @@ section{
     display: flex;
     margin: 0 auto;
 }
-button .btn-link{
+.boton-footer{
     display: flex;
-    width: 100%;
     justify-content: space-between;
     max-width: 539px;
     min-height: 40px;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ffffff;
     margin-top: 8px;
     border-radius: 0px;
     color: #ffffff;
+    width: 100%;
 }
 .Contacto{
     max-width: 445px;
@@ -85,28 +97,40 @@ button .btn-link{
 .RedesSociales{
     width: 100%;
 }
-.dropdown{
+.desplegable-pais{
     margin-top: 1rem;
-    border: solid;
-    border-color: #ffffff;
     margin-bottom: 1rem;
 }
-.Desplegable{
+.desplegable-pais-boton{
     display: inline-flex;
     justify-content: space-between;
-    border: 0px;
+    border: solid 2.4px #ffffff;
+    background-color: #111111;
+    border-radius: 4px;
     padding: 8px;
     width: 100%;
+    height: 46px;
     text-align: left;
     color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
 }
-.marca{
-    width: 100%;
-    align-items: center;
-        color: #ffffff;
+.section2{
+  width: 181px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
 }
-.material-symbols-outlined{
-        color: #ffffff;
+.imagen-marca{
+  width: 94px;
+  height: 129px;
+}
+.img-caption{
+  margin-bottom: 35px;
+  text-align: center;
 }
 
     @media screen and (min-width : 360px) and (max-width:768px){
@@ -127,25 +151,21 @@ button .btn-link{
     @media screen and (min-width : 360px) and (max-width:768px){
         footer{  padding: 16px;
         }
-        .RedesSociales{ margin: 16px;
-        }
-        .btn{    margin-left: 16px;
-            margin-right: 16px;
-        }
-        .dropdown{    margin-left: 16px;
-            margin-right: 16px;
+        .contenedor-2{
+          float: right;
         }
       }
       @media screen and (min-width : 769px){
-        section{ padding-top: 56px;
-                 margin: 0 auto;
+        .section1{ padding-top: 56px;
+                  padding-left: 156px;
+                  width: 1100px;
         }
-        .explicacion{    margin-top: 56px;
+        .mail-input{
+          margin-bottom: 48px;
         }
-        .DataFiscal{    margin-top: 48px;
+        .contenedor-2{    max-width: 445px;
         }
-        .row{    justify-content: space-between;
-        }
-        .Contacto{    max-width: 445px;;
+        .img-caption{
+          padding-bottom: 1rem;
         }
       }
