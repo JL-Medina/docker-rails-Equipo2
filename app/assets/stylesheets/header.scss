@@ -15,7 +15,7 @@ p {
 
 .presupuestos-div {
     background-color: #3860BE;
-    height: 80px;
+    height: 36px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,7 +26,7 @@ p {
 .presupuestos-div p {
     font-family: 'Barlow', sans-serif;
      color: white;
-     font-size: 2rem;
+     font-size: 1rem;
 }
 
 .presupuestos-div-desktop {
@@ -44,13 +44,13 @@ p {
 
 .presupuestos-div-desktop  p {
     font-family: 'Barlow', sans-serif;
-     color: white;
+    color: white;
 
 }
 
 .logo-div {
     background-color: black;
-    height: 150px;
+    height: 48px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -112,21 +112,20 @@ p {
 
 .info-div-mobile {
     background-color: #696965;
-    height: 70px;
+    height: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     padding-right: 30px;
     padding-left: 30px;
-    font-size: 1rem;
 
 }
 
 .info-div-mobile p {
     font-family: 'Barlow', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 12.8px
 
 }
 
@@ -141,7 +140,7 @@ p {
 }
 
 .info-text {
-    font-size: 1rem;
+    font-size: 12.8px;
 }
 
 .material-symbols-outlined {
@@ -153,22 +152,5 @@ p {
 }
 
 
-/*
 
-@media (max-width: 992px) {
-    .presupuestos-div {
-        height: 36px;
-    }
-
-    .presupuestos-div p {
-         font-size: 1rem;
-    }
-
-    .logo-div {
-        height: 36px;
-    }
-
-}
-
-*/
 
