@@ -7,34 +7,38 @@
 
 *{
     box-sizing: border-box;
+
+}
+
+p {
+    font-family: 'Barlow'
 }
 .popup{
     width: 330px;
-    height: 427px;
-    background-color: var(--NegroPuma);
+    height: auto;
+    background-color: red;
     border-radius: 8px;
     margin:  0 auto;
-    font-family: 'Barlow', sans-serif;
 }
 .titulo{
     text-align: center;
     color: var(--BlancoPuma);
-    padding-top: 30px;
+    padding-top: 2rem;
     padding-bottom: 1rem;
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
     margin-top: 1rem;
+    font-family: 'Barlow';
 }
+
 .mail{
     color: var(--BlancoPuma);
     font-size: 1rem;
-    font-weight: 600;
     margin-left: 1rem;
-    margin-bottom: 0px;
 
     }
-.Mailnput{
+.email-input {
     background-color: var(--NegroPuma);
     color: var(--BlancoPuma);
     width: 296px;
@@ -43,17 +47,17 @@
     border: solid 1px;
     border-radius: 4px;
     border-color: var(--Secundario);
-    margin-left: 17px;
-    margin-top: 1rem;
     padding: 0.5rem;
+    margin-top: 16px
+    
 }
 .container-checkbox{
     margin-bottom: 0px;
 }
 .form-check{
     padding-left: 17px;
-    margin-bottom: 20px;
-    margin-top: 8px;
+    margin-bottom: 22px;
+    margin-top: 10px;
     color: var(--BlancoPuma);
     }
 
@@ -62,21 +66,19 @@
     background: var(--NegroPuma);
 }
 .checkmark{
-    font-size: 15px;
-    margin-left: 0.5rem;
+    font-size: 12px;
     color: var(--BlancoPuma);
+    font-family: 'Barlow';
     
 }
-.Ingreso{
-    margin-bottom: 20px;
-}
+
 .boton-confirmacion{
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 .btn-submit{
-    margin: 0 auto;
+    margin-top: 16px;
     width: 100%;
     height: 36px;
     border-radius: 4px;
@@ -84,19 +86,16 @@
     background-color: var(--Secundario);
     color: var(--BlancoPuma);
     font-size: 1rem;
+    font-family: 'Barlow';
 }
 .separador{
     display: flex;
     margin-top: 20px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
 }
-.texto-separador{
+.b-separador{
     color: var(--BlancoPuma);
     margin: 0px;
+    font-size: 12px;    
 
 }  
 .linea-separadora {
@@ -107,13 +106,9 @@
     width: 73px;
     margin-bottom: 10px;
   }
-.boton-google{
-    width: 100%;
-    height: fit-content;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 20px;
-  }
+
+
+
 .btn-google{
  height: 43px;
  display: flex;
@@ -122,19 +117,17 @@
  color: var(--NegroPuma);
  background-color: var(--BlancoPuma);
  border-radius: 4px;
- align-items: center;
- pointer-events: none;
 }
 .google-logo{
-width: 32px;
-height: 32px;
+margin-right: 32px;
 margin-left: 1rem;
-margin-right: 2rem;
+margin-top: 5.5px;
+margin-bottom: 5.5px;
 }
 .registro1{
-    font-size: 13px;
-    font-weight: 600;
-    color: #111111;
+    font-size: 1rem;
+    margin-top: 12.3px;
+    margin-bottom: 12.3px;
 }
 .boton-facebook{
     width: 100%;
@@ -142,27 +135,25 @@ margin-right: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-top: 1rem;
-    pointer-events: none;
   }
 .btn-facebook{
  height: 43px;
  display: flex;
  text-decoration: none;
- font-size: 13px;
- font-weight: 600;
+ font-size: 1rem;
  color: var(--BlancoPuma);
  background-color: var(--Secundario);
  border-radius: 4px;
- align-items: center;
 }
 .facebook-logo{
-    width: 32px;
-    height: 32px;
-    margin-left: 1rem;
-    margin-right: 2rem;
+margin-right: 32px;
+margin-left: 1rem;
+margin-top: 5.5px;
+margin-bottom: 5.5px;
 }
 .registro2{
-    font-size: 13px;
+    font-size: 1rem;
     margin-top: 12.3px;
     margin-bottom: 12.3px;
 }
+

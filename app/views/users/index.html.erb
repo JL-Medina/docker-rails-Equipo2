@@ -1,38 +1,117 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Lastname</th>
-      <th>Phone</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Fecha nac</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.lastname %></td>
-        <td><%= user.phone %></td>
-        <td><%= user.address %></td>
-        <td><%= user.email %></td>
-        <td><%= user.fecha_nac %></td>
-        <td><%= link_to t('common.show'), user %></td>
-        <td><%= link_to t('common.edit'), edit_user_path(user) %></td>
-        <td><%= link_to t('common.destroy'), user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<br>
 
 <%= link_to  t('new.new_user'), new_user_path %>
+
+<%= render :partial => '/homes/header.html.erb' %>
+
+        <div class='header'>
+            <div class='arrow-icon'><span class="material-symbols-outlined">arrow_back</span></div>
+            <div class='header-title'><h1 style='font-weight: 700'>MI CUENTA<h1></div>
+        </div>
+
+<hr class='purple-line'>
+
+
+<div class='wrapper'>
+<div class='seccionalta'>
+
+        <div class='welcome-div'>
+            <div><img src='https://www.pngfind.com/pngs/m/317-3177131_636682202684372240-user-profile-photo-round-hd-png-download.png'></div>
+            <div class='welcome-text'><h1>Bienvenido<h1></div>
+        </div>
+        <div class='user-data-div'>
+            <p class='user-data-info'>DATOS<p>
+            <% @users.each do |user| %>
+            <hr>
+            <p class='user-data-info'><%= user.name %><p>
+            <p class='user-data-info'><%= user.lastname %><p>
+            <p class='user-data-info'><%= user.email %><p>
+            <p class='user-data-info'>+5493624230101<p>
+            <p class='user-data-info'>Calle Falsa 123<p>
+            <td><%= link_to t('common.edit'), edit_user_path(user), class: 'edit-button', style: 'color: white; font-size: 16px' %></td>
+            <% end %>
+        </div>
+</div>
+
+<div class="seccionbaja">
+        <div class="dropdown">
+            <button class="dropbtn"> 
+                <p class='droptitle'>Mis presupuestos<p></p>
+                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+            </button>
+            <div class="dropdown-content">
+                <div class="content-top">
+                    <p class="contenttittle">Nombre</p>
+                    <p class="contenttittle">Fecha</p>
+                    <p class="contenttittle">Estado</p>
+                    <p class="contenttittle">Total</p>
+                </div>
+            </div>
+            <div class="dropdown-content2">
+                <div class="content-label">
+                    <div class="content">
+                        <p class="contentdata">ID/Num presupuesto</p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata-date">20-04-2022 </p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata">Activo</p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata">$320.333</p>
+                    </div>
+                </div>
+                <div class="content-label">
+                    <div class="content">
+                        <p class="contentdata">ID/Num presupuesto</p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata-date">20-04-2022 </p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata">Activo</p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata">$320.333</p>
+                    </div>
+                </div>
+                <div class="content-label">
+                    <div class="content">
+                        <p class="contentdata">ID/Num presupuesto</p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata-date">20-04-2022 </p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata">Activo</p>
+                    </div>
+                    <div class="content">
+                        <p class="contentdata">$320.333</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="dropdown">
+                <button class="dropbtn"> 
+                <p class='droptitle'>Mis presupuestos<p></p>
+                <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </button>
+                <div class="dropdown-content">
+                    <button class="tarjeta" type="button">
+                        <div class='card-info'>
+                            <span class="material-symbols-outlined">credit_card</span>
+                            <p class="IDtarjeta"> **** 2657 Debito</p></div>
+                        <span class="material-symbols-outlined">keyboard_arrow_right</span>
+                    </button>
+                    <button class="tarjeta" type="button">
+                        <div class='card-info'>
+                            <span class="material-symbols-outlined">credit_card</span>
+                            <p class="IDtarjeta"> **** 2657 Debito</p></div>
+                        <span class="material-symbols-outlined">keyboard_arrow_right</span>
+                    </button>
+                </div>
+            </div>
+</div>
+</div>

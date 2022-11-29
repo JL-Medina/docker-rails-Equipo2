@@ -150,5 +150,17 @@ p {
 }
 
 
+.info-text:hover {
+    text-decoration: none;
+    color: white
+}
 
+a.info-text {
+    color: white;
+}
+.info-text:visited {
+    text-decoration: none;
+    color: white;
+    background-color: #3860BE;
+}
 
