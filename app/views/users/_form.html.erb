@@ -1,9 +1,10 @@
 
 
-        <div class='header'>
-            <div class='arrow-icon'><span class="material-symbols-outlined">arrow_back</span></div>
-            <div class='header-title'><h1>MI CUENTA<h1></div>
-        </div>
+
+<div class='header'>
+    <div class='arrow-icon'><span class="material-symbols-outlined">arrow_back</span></div>
+    <div class='header-title'><h1>MI CUENTA<h1></div>
+</div>
 
 <hr class='purple-line'>
 
@@ -17,13 +18,30 @@
         </div>
         <div class='user-data-div'>
             <p class='user-data-info'>DATOS<p>
-            <hr>
-            <p class='user-data-info'><%= @user.name %><p>
-            <p class='user-data-info'>Falseti<p>
-            <p class='user-data-info'>cris.false@gmail.com<p>
-            <p class='user-data-info'>+541589233495<p>
-            <p class='user-data-info'>Calle Falsa 123<p>
-            <button style='font-family: Barlow; color: white;' class='edit-button'><%= link_to t('common.edit'), edit_user_path(@user) %></button>
+            <%= form_with(model: user, local: true) do |form| %>
+                <% if user.errors.any? %>
+                    <div id="error_explanation">
+                    <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+                    <ul>
+                    <% user.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                    </ul>
+                    </div>
+                <% end %>
+
+                <hr>
+                    <p class='user-data-info'><%= form.label :name,t('name') %><%= form.text_field :name %><p>
+                    <p class='user-data-info'><%= form.label :lastname,t('lastname') %><%= form.text_field :lastname %><p>
+                    <p class='user-data-info'><%= form.label :email %><%= form.email_field :email %></p>
+                    <p class='user-data-info'><%= form.label :phone,t('phone') %><%= form.number_field :phone %><p>
+                    <p class='user-data-info'><%= form.label :address,t('address') %><%= form.text_field :address %><p>
+                    <p class='user-data-info'><%= form.label :fecha_nac,t('fecha_nac') %><%= form.date_field :fecha_nac %><p>
+                <div class="actions">
+                    <%= form.submit 'Actualizar', :class => 'edit-button' %>
+                </div>
+            <% end %>
         </div>
 </div>
 
@@ -109,53 +127,3 @@
 </div>
 </div>
 
-
-
-
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name,t('name') %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :lastname,t('lastname') %>
-    <%= form.text_field :lastname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone,t('phone') %>
-    <%= form.number_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address,t('address') %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha_nac,t('fecha_nac') %>
-    <%= form.date_field :fecha_nac %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

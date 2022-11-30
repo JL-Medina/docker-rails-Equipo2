@@ -1,4 +1,4 @@
-
+<%= render :partial => '/homes/header.html.erb' %>
 
         <div class='header'>
             <div class='arrow-icon'><span class="material-symbols-outlined">arrow_back</span></div>
@@ -19,11 +19,11 @@
             <p class='user-data-info'>DATOS<p>
             <hr>
             <p class='user-data-info'><%= @user.name %><p>
-            <p class='user-data-info'>Falseti<p>
-            <p class='user-data-info'>cris.false@gmail.com<p>
-            <p class='user-data-info'>+541589233495<p>
-            <p class='user-data-info'>Calle Falsa 123<p>
-            <button style='font-family: Barlow; color: white;' class='edit-button'><%= link_to t('common.edit'), edit_user_path(@user) %></button>
+            <p class='user-data-info'><%= @user.lastname %><p>
+            <p class='user-data-info'><%= @user.email %><p>
+            <p class='user-data-info'><%= @user.phone %><p>
+            <p class='user-data-info'><%= @user.address %><p>
+            <%= link_to t('common.edit'), edit_user_path(@user), :class => 'edit-button', :style => 'color: white' %>
         </div>
 </div>
 
@@ -142,9 +142,8 @@
   <%= @user.fecha_nac %>
 </p>
 
-<%= link_to t('common.edit'), edit_user_path(@user) %> |
-<%= link_to t('common.back'), users_path %>
 
+<%= render :partial => '/homes/footer.html.erb' %>
 
 
 
