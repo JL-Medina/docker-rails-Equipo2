@@ -10,7 +10,7 @@
 }
 .popup{
     width: 330px;
-    height: 427px;
+    height: 516px;
     background-color: var(--NegroPuma);
     border-radius: 8px;
     margin:  0 auto;
@@ -47,6 +47,19 @@
     margin-top: 1rem;
     padding: 0.5rem;
 }
+.pass-input{
+    background-color: var(--NegroPuma);
+    color: var(--BlancoPuma);
+    width: 296px;
+    height: 49px;
+    font-size: 1rem;
+    border: solid 1px;
+    border-radius: 4px;
+    border-color: var(--Secundario);
+    margin-left: 17px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
 .container-checkbox{
     margin-bottom: 0px;
 }
@@ -65,7 +78,9 @@
     font-size: 15px;
     margin-left: 0.5rem;
     color: var(--BlancoPuma);
-    
+}
+.password-input{
+    padding-top: 1rem;
 }
 .Ingreso{
     margin-bottom: 20px;
@@ -143,6 +158,7 @@ margin-right: 2rem;
     padding-right: 1rem;
     margin-top: 1rem;
     pointer-events: none;
+    margin-bottom: 1rem;
   }
 .btn-facebook{
  height: 43px;

@@ -1,171 +1,37 @@
-*{
-  box-sizing: border-box;
-}
 footer{
-    min-height: 665px;
-    max-height: 766px;
-    margin: 0px;
-    font-family: 'Barlow', sans-serif;
+    background-color: #111;
 }
-.section1{
-    max-width: 1110px;
-    justify-content: center;
-}
-.Suscripcion{
-    max-width: 425px;
-    max-height: 40px;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: solid;
-    border-color: #ffffff;
-}
-.MailInput{
-     width: 100%;
-    border-top-style: hidden;
-    border-bottom-style: hidden;
-    border-left-style: hidden;
-    border-right-style: hidden;
-    font-size: 16px;
-    margin-left: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    background-color: #111111;
-}
-.explicacion{
+.label-input{
+    color: #fff;
     font-size: 12px;
-    justify-content: center;
-    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 0.5rem;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
 }
-.botones-primarios{
-  padding-left: 0px;
-}
-.contenedor-boton{
-  border-bottom: solid 1px #ffffff;
-}
-.imagen-redes{
-  width: 28px;
-  height: 28px;
-}
-.fotos-redes{
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-.SubmitSuscription {
-    float: right;
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    color: #ffffff;
-
-}
-.ArrowRight {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 200,
-    'opsz' 48;
-  padding-right: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  
-  }
-.DataFiscal{
-    height: 129px;
-    width: 94px;
-    display: flex;
-    margin: 0 auto;
-}
-.boton-footer{
+.suscripcion{
+    border: solid 2px #fff;
+    background-color: #111;
     display: flex;
     justify-content: space-between;
-    max-width: 539px;
-    min-height: 40px;
-    justify-content: space-between;
-    border-bottom: 1px solid #ffffff;
-    margin-top: 8px;
-    border-radius: 0px;
-    color: #ffffff;
-    width: 100%;
-}
-.Contacto{
-    max-width: 445px;
     align-items: center;
+    padding: 0.5rem;
+    height: 40px;
 }
-.RedesSociales{
-    width: 100%;
-}
-.desplegable-pais{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.desplegable-pais-boton{
-    display: inline-flex;
-    justify-content: space-between;
-    border: solid 2.4px #ffffff;
-    background-color: #111111;
-    border-radius: 4px;
-    padding: 8px;
-    width: 100%;
-    height: 46px;
-    text-align: left;
+.mailnput{
     color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-}
-.section2{
-  width: 181px;
-  height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 auto;
-  align-items: center;
-}
-.imagen-marca{
-  width: 94px;
-  height: 129px;
-}
-.img-caption{
-  margin-bottom: 35px;
-  text-align: center;
+    background-color: #111;
+    border: none;
+    width: 100%;
 }
 
-    @media screen and (min-width : 360px) and (max-width:768px){
-      footer{  background-color: #111111;
-      }
-      .Desplegable{  background-color: #111111;
-      }
+@media screen and (min-width : 360px) and (max-width:768px){
+    .suscripcion{
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
-    @media screen and (min-width : 769px){
-      footer{  background-color: #111111 ;
-      }
-      .Desplegable{  background-color: #111111 ;
-      }
-      .MailInput{  background-color: #111111 ;
-      }
+    .label-input{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    
-    @media screen and (min-width : 360px) and (max-width:768px){
-        footer{  padding: 16px;
-        }
-        .contenedor-2{
-          float: right;
-        }
-      }
-      @media screen and (min-width : 769px){
-        .section1{ padding-top: 56px;
-                  padding-left: 156px;
-                  width: 1100px;
-        }
-        .mail-input{
-          margin-bottom: 48px;
-        }
-        .contenedor-2{    max-width: 445px;
-        }
-        .img-caption{
-          padding-bottom: 1rem;
-        }
-      }
+ }
