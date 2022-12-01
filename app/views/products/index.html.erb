@@ -54,7 +54,7 @@
         <%=hidden_field_tag :product_id_modal %>
         <%=hidden_field_tag :price_modal %>
         <div class="field">
-          <%= select_tag :budget_id, Budget.all.map{|bud| [bud.name, bud.id]}%>
+          <%= select_tag :budget_id, options_for_select(Budget.all.map{|bud| [bud.name, bud.id]})%>
         </div>
       </div>
       <div class="modal-footer">
@@ -82,32 +82,22 @@
   }
 
   function addProduct(){
-    debugger;
+    
     var product_id = document.getElementById("product_id_modal").value;
     var price = document.getElementById("price_modal").value;   
     var quantity = document.getElementById("quantity_id_" + product_id).value;
-    
+    var budget_id = document.getElementById("budget_id").value;
 
-        // if (quantity != 0)
-    // {
-    //   //$('#modal').modal('show');
-    //   console.log(price)
-    //   console.log(quantity)
-    //   totalPrice = price * quantity
-    //   console.log (totalPrice) 
-    //   // $.ajax({
-    //   //   type: "",
-    //   //   url: "<%=add_product_path%>",
-    //   //   data: (budget_select.value == "N") ? data 
-    //   //   :
-    //   //    data2,
-    //   //       success(result){
-    //   //         $
-    //   //       }
+    const params = {
+        product_id : product_id,
+        price : price,
+        quantity : quantity,
+        id : budget_id
+    }
 
-    //   // })
-    // }
-    
+    $.get('/add_product', params, function(data){
+        #console.log(data);
+    });
   }
 
 </script>
