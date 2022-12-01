@@ -24,14 +24,81 @@ footer{
     border: none;
     width: 100%;
 }
+.contenedor-boton{
+    border-bottom: solid 1px #fff;
+}
+.boton-footer{
+    font-size: 10px;
+    padding:0px;
+    width: 100%;
+}
+.contenedor-boton{
+    padding-left: 5px;
+    padding-right: 0.5rem;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+.imagen-redes{
+    width: 24px;
+    height: 24px;
+}
+.fotos-redes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.desplegable-pais-boton{
+    width: 100%;
+    height: 46px;
+    border: solid  2px  #fff;
+    border-radius: 4px;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-weight: 600;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
 
+}
+.imagen-marca{
+    width: 94px;
+    height: 129px;
+    margin: 0 auto;
+}
 @media screen and (min-width : 360px) and (max-width:768px){
-    .suscripcion{
-        margin-left: 1rem;
-        margin-right: 1rem;
+    footer{
+        padding: 1rem;
     }
-    .label-input{
-        padding-left: 1rem;
-        padding-right: 1rem;
+    div .row{
+        width: 328px;
+        align-items: center;
+        margin: 0 auto;
     }
  }
+ @media screen and (min-width : 769px){
+    .section-1{
+            width: 425px;
+            margin-left: 165px;
+    }
+    .botones-ayuda{
+        max-width: 539px;
+    }
+    .contacto-pais{
+        max-width: 445px;
+    }
+    .section2{
+        padding-bottom: 1rem;
+    }
+    div .container{
+        align-items: center;
+    }
+    div .col-md-auto{
+        width: 10%;
+    }
+ }
+
