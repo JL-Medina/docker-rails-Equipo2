@@ -14,6 +14,7 @@ class LineItemsTest < ApplicationSystemTestCase
     visit line_items_url
     click_on "New Line Item"
 
+    fill_in "Budget", with: @line_item.budget
     fill_in "Product", with: @line_item.product_id
     fill_in "Quantity", with: @line_item.quantity
     fill_in "Totalprice", with: @line_item.totalprice
@@ -27,6 +28,7 @@ class LineItemsTest < ApplicationSystemTestCase
     visit line_items_url
     click_on "Edit", match: :first
 
+    fill_in "Budget", with: @line_item.budget
     fill_in "Product", with: @line_item.product_id
     fill_in "Quantity", with: @line_item.quantity
     fill_in "Totalprice", with: @line_item.totalprice

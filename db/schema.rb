@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_17_182802) do
+ActiveRecord::Schema.define(version: 2022_12_01_144822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,8 +37,10 @@ ActiveRecord::Schema.define(version: 2022_11_17_182802) do
     t.bigint "product_id"
     t.integer "quantity"
     t.integer "totalprice"
+    t.bigint "budget_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["budget_id"], name: "index_line_items_on_budget_id"
     t.index ["product_id"], name: "index_line_items_on_product_id"
   end
 
@@ -83,6 +85,7 @@ ActiveRecord::Schema.define(version: 2022_11_17_182802) do
   end
 
   add_foreign_key "budgets", "users"
+  add_foreign_key "line_items", "budgets"
   add_foreign_key "line_items", "products"
   add_foreign_key "products", "categories"
 end

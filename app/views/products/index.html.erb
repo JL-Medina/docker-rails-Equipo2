@@ -54,60 +54,14 @@
         <%=hidden_field_tag :product_id_modal %>
         <%=hidden_field_tag :price_modal %>
         <div class="field">
-          <%= select_tag :budget_id, Budget.all.map{|bud| [bud.name, bud.id]}%>
+          <%= select_tag :budget_id, options_for_select(Budget.all.map{|bud| [bud.name, bud.id]})%>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <td><%= link_to 'Add to budget', "#",onclick: "addProduct()" %></td>
+        <%= submit_tag "Save", :class => 'btn btn-primary' %>
+        <%= button_to 'Add to budget', line_items_path(product_id: @product), class: 'button is-warning add-to-budget' %>
       </div>
     </div>
   </div>
 </div>
-
-<script>
-
-  
-  function newBudget (){ 
-    }
-
-  function openModalProduct(product_id, price) {
-    const modal = document.getElementById('modal');
-    var quantity = document.getElementById("quantity_id_" + product_id).value;
-    
-    $('#product_id_modal').val(product_id)
-    $('#price_modal').val(price)
-    
-  }
-
-  function addProduct(){
-    debugger;
-    var product_id = document.getElementById("product_id_modal").value;
-    var price = document.getElementById("price_modal").value;   
-    var quantity = document.getElementById("quantity_id_" + product_id).value;
-    
-
-        // if (quantity != 0)
-    // {
-    //   //$('#modal').modal('show');
-    //   console.log(price)
-    //   console.log(quantity)
-    //   totalPrice = price * quantity
-    //   console.log (totalPrice) 
-    //   // $.ajax({
-    //   //   type: "",
-    //   //   url: "<%=add_product_path%>",
-    //   //   data: (budget_select.value == "N") ? data 
-    //   //   :
-    //   //    data2,
-    //   //       success(result){
-    //   //         $
-    //   //       }
-
-    //   // })
-    // }
-    
-  }
-
-</script>
