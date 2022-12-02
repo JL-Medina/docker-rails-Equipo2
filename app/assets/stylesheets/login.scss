@@ -8,16 +8,30 @@
 *{
     box-sizing: border-box;
 }
+
+.background-full {
+    background-color: grey;
+}
+
+
+
 .popup{
     width: 330px;
-    height: 516px;
+    height: auto;
     background-color: var(--NegroPuma);
     border-radius: 8px;
     margin:  0 auto;
     font-family: 'Barlow', sans-serif;
+    padding-bottom: 12px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+
 }
 .titulo{
     text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Barlow';
     color: var(--BlancoPuma);
     padding-top: 30px;
     padding-bottom: 1rem;
@@ -60,30 +74,27 @@
     margin-top: 1rem;
     padding: 0.5rem;
 }
-.container-checkbox{
-    margin-bottom: 0px;
-}
+
 .form-check{
-    padding-left: 17px;
-    margin-bottom: 20px;
     margin-top: 8px;
     color: var(--BlancoPuma);
     }
 
 .checkbox{
     border: solid var(--BlancoPuma);
-    background: var(--NegroPuma);
+    background-color: black;
 }
 .checkmark{
     font-size: 15px;
-    margin-left: 0.5rem;
     color: var(--BlancoPuma);
 }
+
 .password-input{
     padding-top: 1rem;
 }
 .Ingreso{
     margin-bottom: 20px;
+    float: left
 }
 .boton-confirmacion{
     width: 100%;
@@ -112,6 +123,7 @@
 .texto-separador{
     color: var(--BlancoPuma);
     margin: 0px;
+    font-family: 'Barlow';
 
 }  
 .linea-separadora {
@@ -146,9 +158,10 @@ margin-left: 1rem;
 margin-right: 2rem;
 }
 .registro1{
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     color: #111111;
+    font-family: 'Barlow';
 }
 .boton-facebook{
     width: 100%;
@@ -177,7 +190,9 @@ margin-right: 2rem;
     margin-right: 2rem;
 }
 .registro2{
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: 600;
     margin-top: 12.3px;
     margin-bottom: 12.3px;
+    font-family: 'Barlow';
 }
