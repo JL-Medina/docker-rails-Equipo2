@@ -65,3 +65,39 @@
     </div>
   </div>
 </div>
+
+<script>
+
+  
+  function newBudget (){ 
+    }
+
+  function openModalProduct(product_id, price) {
+    const modal = document.getElementById('modal');
+    var quantity = document.getElementById("quantity_id_" + product_id).value;
+    
+    $('#product_id_modal').val(product_id)
+    $('#price_modal').val(price)
+    
+  }
+
+  function addProduct(){
+    
+    var product_id = document.getElementById("product_id_modal").value;
+    var price = document.getElementById("price_modal").value;   
+    var quantity = document.getElementById("quantity_id_" + product_id).value;
+    var budget_id = document.getElementById("budget_id").value;
+
+    const params = {
+        product_id : product_id,
+        price : price,
+        quantity : quantity,
+        id : budget_id
+    }
+
+    $.get('/add_product', params, function(data){
+        #console.log(data);
+    });
+  }
+
+</script>
