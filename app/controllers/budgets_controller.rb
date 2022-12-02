@@ -1,5 +1,4 @@
 class BudgetsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, with: :invalid_budget
   before_action :set_budget, only: %i[ show edit update destroy ]
 
   # GET /budgets or /budgets.json
@@ -77,10 +76,5 @@ class BudgetsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def budget_params
       params.require(:budget).permit(:user_id, :name, :expiration_date, :create_date, :quantity_products, :total_budget)
-    end
-
-    def invalid_budget
-      logger.error "Attempt to access invalid budget #{params[:id]}"
-      redirect_to root_path, notice: "That budget doesn't exist"
     end
 end
