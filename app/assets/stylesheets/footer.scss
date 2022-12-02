@@ -80,7 +80,7 @@ footer{
         margin: 0 auto;
     }
  }
- @media screen and (min-width : 769px){
+ @media screen and (min-width : 768px){
     .section-1{
             width: 425px;
             margin-left: 165px;
@@ -97,8 +97,9 @@ footer{
     div .container{
         align-items: center;
     }
-    div .col-md-auto{
-        width: 10%;
+    .agregarclase{
+        gap:10%
     }
+
  }
 
