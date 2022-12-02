@@ -31,10 +31,9 @@
 </p>
 
 <p>
-  <% @line_items.each do |line_item| %>
-    <%= @line_item.quantity %>
+  <% @budget.line_items.each do |item| %>
+    <%= item.quantity %>
   <% end %>
-</p>
 
 <%= link_to t('common.edit'), edit_budget_path(@budget) %> |
 <%= link_to t('common.back'), budgets_path %>
