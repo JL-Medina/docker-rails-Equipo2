@@ -1,48 +1,30 @@
 
-
-
-<div class='header'>
-    <div class='arrow-icon'><span class="material-symbols-outlined">arrow_back</span></div>
-    <div class='header-title'><h1>MI CUENTA<h1></div>
-</div>
+        <div class='header'>
+            <div class='arrow-icon'><span class="material-symbols-outlined">arrow_back</span></div>
+            <div class='header-title'><h1>MI CUENTA<h1></div>
+        </div>
 
 <hr class='purple-line'>
 
 
 <div class='wrapper'>
 <div class='seccionalta'>
-
-        <div class='welcome-div'>
-            <div><img src='https://cdn-icons-png.flaticon.com/512/149/149071.png'></div>
-            <div class='welcome-text'><h1>Bienvenido<h1></div>
+    <div class='container'>
+        <div class='welcome-div row'>
+            <div class='col-lg'><img class='col-lg' src='https://cdn-icons-png.flaticon.com/512/149/149071.png'></div>
+            <div class='welcome-text col-lg'><h1  class='col-lg' style='12px'>Bienvenido<h1></div>
         </div>
         <div class='user-data-div'>
             <p class='user-data-info'>DATOS<p>
-            <%= form_with(model: user, local: true) do |form| %>
-                <% if user.errors.any? %>
-                    <div id="error_explanation">
-                    <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-                    <ul>
-                    <% user.errors.full_messages.each do |message| %>
-                        <li><%= message %></li>
-                    <% end %>
-                    </ul>
-                    </div>
-                <% end %>
-
-                <hr>
-                    <p class='user-data-info'><%= form.label :name,t('name') %><%= form.text_field :name %><p>
-                    <p class='user-data-info'><%= form.label :lastname,t('lastname') %><%= form.text_field :lastname %><p>
-                    <p class='user-data-info'><%= form.label :email %><%= form.email_field :email %></p>
-                    <p class='user-data-info'><%= form.label :phone,t('phone') %><%= form.number_field :phone %><p>
-                    <p class='user-data-info'><%= form.label :address,t('address') %><%= form.text_field :address %><p>
-                    <p class='user-data-info'><%= form.label :fecha_nac,t('fecha_nac') %><%= form.date_field :fecha_nac %><p>
-                <div class="actions">
-                    <%= form.submit 'Actualizar', :class => 'edit-button' %>
-                </div>
-            <% end %>
+            <hr>
+            <p class='user-data-info'>Cristian<p>
+            <p class='user-data-info'>Falseti<p>
+            <p class='user-data-info'>cris.false@gmail.com<p>
+            <p class='user-data-info'>+541589233495<p>
+            <p class='user-data-info'>Calle Falsa 123<p>
+            <button class='edit-button'>Editar</button>
         </div>
+    <div>
 </div>
 
 <div class="seccionbaja">
@@ -125,5 +107,3 @@
                 </div>
             </div>
 </div>
-</div>
-
