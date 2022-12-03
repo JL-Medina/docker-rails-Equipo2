@@ -1,6 +1,8 @@
-<h1><%=t('.edit_user') %></h1>
+
+<%= render :partial => '/homes/header.html.erb' %>
+
 
 <%= render 'form', user: @user %>
 
-<%= link_to t('common.show'), @user %> |
-<%= link_to t('common.back'), users_path %>
+
+<%= render :partial => '/homes/footer.html.erb' %>
