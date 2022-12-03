@@ -22,7 +22,6 @@ class BudgetsController < ApplicationController
   # POST /budgets or /budgets.json
   def create
     @budget = Budget.new(budget_params)
-
     respond_to do |format|
       if @budget.save
         format.html { redirect_to budget_url(@budget), notice: t('common.create') }
@@ -34,6 +33,16 @@ class BudgetsController < ApplicationController
     end
   end
 
+  def add_product
+    if params[:id].present?    
+      @budget = Budget.find(params[:id])   
+    else
+      @budget = Budget.new(budget_params)
+    end
+    @line_item = LineItem.create(product_id: params[:product_id], totalprice: params[:price], quantity: params[:quantity], budget_id: @budget.id)
+    #redirect_to budget_path
+  end 
+    
   # PATCH/PUT /budgets/1 or /budgets/1.json
   def update
     respond_to do |format|

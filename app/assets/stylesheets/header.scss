@@ -1,0 +1,164 @@
+
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    font-family: 'Barlow', sans-serif;
+     color: white;
+     margin: 0 !important ; 
+}
+
+
+.presupuestos-div {
+    background-color: #3860BE;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.presupuestos-div p {
+    font-family: 'Barlow', sans-serif;
+     color: white;
+     font-size: 1rem;
+}
+
+.presupuestos-div-desktop {
+    background-color: #3860BE;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 160px;
+    padding-right: 160px;
+    
+
+}
+
+.presupuestos-div-desktop  p {
+    font-family: 'Barlow', sans-serif;
+    color: white;
+
+}
+
+.logo-div {
+    background-color: black;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.logo-div-desktop {
+    min-height: 104px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 160px;
+    padding-right: 160px;
+    
+}
+
+.logo-div-desktop p {
+    font-size: 1rem;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+
+}
+
+
+.logo-div-desktop input {
+    height: 50px;
+    border-radius: 8px;
+    color: black;
+    padding-left: 20px;
+}
+
+.info-div-desktop {
+    background-color: #AE946D;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+.info-div-desktop p {
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    font-size: 1rem;
+    text-decoration: underline;
+
+}
+
+.info-div-mobile {
+    background-color: #696965;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 30px;
+    padding-left: 30px;
+
+}
+
+.info-div-mobile p {
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    font-size: 12.8px
+
+}
+
+
+.presupuestos-text {
+    font-size: 35px;
+}
+
+
+.logo-text {
+    font-size: 5rem;
+}
+
+.info-text {
+    font-size: 12.8px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.info-text:hover {
+    text-decoration: none;
+    color: white
+}
+
+a.info-text {
+    color: white;
+}
+.info-text:visited {
+    text-decoration: none;
+    color: white;
+    background-color: #3860BE;
+}
+

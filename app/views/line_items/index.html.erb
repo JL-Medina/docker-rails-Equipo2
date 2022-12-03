@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Line Items</h1>
+<h1><%=t('name_line_item')%></h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   <tbody>
     <% @line_items.each do |line_item| %>
       <tr>
-        <td><%= line_item.product %></td>
+        <td><%= line_item.product.name %></td>
         <td><%= line_item.quantity %></td>
         <td><%= line_item.totalprice %></td>
         <td><%= link_to t('common.show'), line_item %></td>

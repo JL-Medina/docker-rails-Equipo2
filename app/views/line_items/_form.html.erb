@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :product_id, t('product_id')%>
-    <%= form.text_field :product_id %>
+  <%= form.select :product_id, Product.all.map{|prod| [prod.name,prod.id]}%>
   </div>
 
   <div class="field">
@@ -22,8 +21,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :totalprice, t('totalprice') %>
-    <%= form.number_field :totalprice %>
+    <%= form.label :totalprice, t('price') %>
+    <%= form.text_field :totalprice, readonly: true %>
   </div>
 
   <div class="actions">

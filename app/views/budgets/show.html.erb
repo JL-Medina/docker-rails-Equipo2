@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @budget.user %>
+  <%= @budget.user.name %>
 </p>
 
 <p>
@@ -28,6 +28,12 @@
 <p>
   <strong>Total budget:</strong>
   <%= @budget.total_budget %>
+</p>
+
+<p>
+  <% @line_items.each do |line_item| %>
+    <%= @line_item.quantity %>
+  <% end %>
 </p>
 
 <%= link_to t('common.edit'), edit_budget_path(@budget) %> |

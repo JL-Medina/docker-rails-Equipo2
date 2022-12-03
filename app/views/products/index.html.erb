@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1><%=t('name_products')%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th>Category</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th>Categoria</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +19,11 @@
         <td><%= product.price %></td>
         <td><%= product.description %></td>
         <td><%= product.category.name %></td>
+        <td><%=number_field_tag :quantity, 0, min: 0, step: 1, id: "quantity_id_#{product.id}"%></td>
+        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal" id='open-modal' onClick="<%="openModalProduct(#{product.id}, #{product.price})" %>" >
+        Launch demo modal
+        </button></td>
+        
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,3 +35,69 @@
 <br>
 
 <%= link_to t('new.new_product'), new_product_path %>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+        <%=hidden_field_tag :product_id_modal %>
+        <%=hidden_field_tag :price_modal %>
+        <div class="field">
+          <%= select_tag :budget_id, options_for_select(Budget.all.map{|bud| [bud.name, bud.id]})%>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <td><%= link_to 'Add to budget', "#",onclick: "addProduct()" %></td>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  
+  function newBudget (){ 
+    }
+
+  function openModalProduct(product_id, price) {
+    const modal = document.getElementById('modal');
+    var quantity = document.getElementById("quantity_id_" + product_id).value;
+    
+    $('#product_id_modal').val(product_id)
+    $('#price_modal').val(price)
+    
+  }
+
+  function addProduct(){
+    
+    var product_id = document.getElementById("product_id_modal").value;
+    var price = document.getElementById("price_modal").value;   
+    var quantity = document.getElementById("quantity_id_" + product_id).value;
+    var budget_id = document.getElementById("budget_id").value;
+
+    const params = {
+        product_id : product_id,
+        totalprice : price,
+        quantity : quantity,
+        id : budget_id
+    }
+
+    $.get('/add_product', params, function(data){
+        console.log(data);
+        console.log("Producto agregado al presupuesto");
+    });
+  }
+
+</script>

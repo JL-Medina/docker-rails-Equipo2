@@ -1,0 +1,116 @@
+
+
+<p class='section-title'>ACCESORIOS<p>
+
+
+
+<!-- Slider main container -->
+<div class="swiper swiper-accesories">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+    <div class="swiper-slide">
+      <div class="product-card-container"><%= render :partial => 'accesories.html.erb' %></div>
+    </div>
+  </div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+
+<script>
+
+const swiperAcc = new Swiper('.swiper-accesories', {
+  // Optional parameters
+  loop: true,
+  centeredSlides: true,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 1200px
+    1200: {
+      centeredSlides: true,
+      spaceBetween: 30,
+      width: 255,
+    },
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+</script>
+<style>
+
+.swiper-accesories {
+  max-width: 830px;
+  width: 100%
+  
+}
+
+
+.swiper {
+  width: 90%;
+  
+
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+
+}
+
+.swiper-wrapper {
+  width: 100%; 
+}
+
+
+.swiper-button-next {
+  color: black;
+}
+
+.swiper-button-prev {
+  color: black;
+  
+}
+
+.section-title {
+    color: black;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding-left: 10.313rem;
+    padding-bottom: 32px
+}
+
+</style>

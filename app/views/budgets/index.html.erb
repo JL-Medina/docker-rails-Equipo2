@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Budgets</h1>
+<h1><%=t('name_budget')%></h1>
 
 <table>
   <thead>
@@ -18,7 +18,7 @@
   <tbody>
     <% @budgets.each do |budget| %>
       <tr>
-        <td><%= budget.user %></td>
+        <td><%= budget.user.name %></td>
         <td><%= budget.name %></td>
         <td><%= budget.expiration_date %></td>
         <td><%= budget.create_date %></td>
@@ -33,5 +33,6 @@
 </table>
 
 <br>
+
 
 <%= link_to t('new.new_budget'), new_budget_path %>
