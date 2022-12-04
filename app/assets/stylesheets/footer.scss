@@ -1,6 +1,9 @@
 footer{
     background-color: #111;
 }
+.section-1{
+    max-width: 425px;
+}
 .label-input{
     color: #fff;
     font-size: 12px;
@@ -99,6 +102,9 @@ footer{
     }
     .agregarclase{
         gap:10%
+    }
+    div .agregarclase{
+        margin-top: 2rem;
     }
 
  }

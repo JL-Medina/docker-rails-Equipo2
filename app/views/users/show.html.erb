@@ -42,53 +42,28 @@
                 </div>
             </div>
             <div class="dropdown-content2">
-                <div class="content-label">
-                    <div class="content">
-                        <p class="contentdata">ID/Num presupuesto</p>
+                <% @budgets.each do |budget| %>
+                    <div class="content-label">
+                        <div class="content">
+                            <p class="contentdata"><%= budget.id %></p>
+                        </div>
+                        <div class="content">
+                            <p class="contentdata-date"><%= budget.create_date %></p>
+                        </div>
+                        <div class="content">
+                            <p class="contentdata">Activo</p>
+                        </div>
+                        <div class="content">
+                            <p class="contentdata">$ <%= budget.total_budget %></p>
+                        </div>                    
                     </div>
-                    <div class="content">
-                        <p class="contentdata-date">20-04-2022 </p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">Activo</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">$320.333</p>
-                    </div>
-                </div>
-                <div class="content-label">
-                    <div class="content">
-                        <p class="contentdata">ID/Num presupuesto</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata-date">20-04-2022 </p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">Activo</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">$320.333</p>
-                    </div>
-                </div>
-                <div class="content-label">
-                    <div class="content">
-                        <p class="contentdata">ID/Num presupuesto</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata-date">20-04-2022 </p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">Activo</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">$320.333</p>
-                    </div>
-                </div>
+                <% end %>
+
             </div>
         </div>
             <div class="dropdown">
                 <button class="dropbtn"> 
-                <p class='droptitle'>Mis presupuestos<p></p>
+                <p class='droptitle'>Metodos de pago<p></p>
                 <span class="material-symbols-outlined">keyboard_arrow_down</span>
                 </button>
                 <div class="dropdown-content">

@@ -89,14 +89,14 @@
 
     const params = {
         product_id : product_id,
-        price : price,
+        totalprice : price,
         quantity : quantity,
         id : budget_id
     }
 
     $.get('/add_product', params, function(data){
-      console.log(data);
-      console.log("Producto agregado al presupuesto");
+        console.log(data);
+        console.log("Producto agregado al presupuesto");
     });
   }
 

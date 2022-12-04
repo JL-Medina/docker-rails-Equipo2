@@ -5,11 +5,11 @@
 <div class="product-card">
     <img src="https://essential.vtexassets.com/arquivos/ids/543902/965-0293_1.jpg?v=637850383058970000"><img>
     <div class="top-div">
-        <p class="product-price">$25000</p>
+        <p class="product-price">$<%= product.price %></p>
         <p class="product-sell-status">Más vendido</p>
     </div>
     <div class="middle-div">
-        <p class="product-name">Botines Future - Z 2</p>
+        <p class="product-name"><%= product.name %></p>
     </div>
     <div class="bottom-div">
         <p class="product-color">Negros</p>
@@ -21,6 +21,7 @@
         <button class="add-button"><span class="material-symbols-outlined">add_circle</span> A presupuesto</button>
     </div>
 </div>
+
 
 <style>
 
