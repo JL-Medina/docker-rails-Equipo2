@@ -31,9 +31,8 @@
 </p>
 
 <p>
-  <% @budget.line_items.each do |item| %>
-    <%= item.quantity %>
-  <% end %>
+  <% LineItem.all.map{|bud| [bud.budget_id]} %>
+</p>
 
 <%= link_to t('common.edit'), edit_budget_path(@budget) %> |
 <%= link_to t('common.back'), budgets_path %>
