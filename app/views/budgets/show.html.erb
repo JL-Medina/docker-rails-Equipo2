@@ -1,37 +1,43 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <h6>User:</h6>
   <%= @budget.user.name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <h6>Name:</h6>
   <%= @budget.name %>
 </p>
 
 <p>
-  <strong>Expiration date:</strong>
+  <h6>Expiration date:</h6>
   <%= @budget.expiration_date %>
 </p>
 
 <p>
-  <strong>Create date:</strong>
+  <h6>Create date:</h6>
   <%= @budget.create_date %>
 </p>
 
 <p>
-  <strong>Quantity products:</strong>
+  <h6>Quantity products:</h6>
   <%= @budget.quantity_products %>
 </p>
 
 <p>
-  <strong>Total budget:</strong>
+  <h6>Total budget:</h6>
   <%= @budget.total_budget %>
 </p>
 
 <p>
-  <% LineItem.all.map{|bud| [bud.budget_id]} %>
+  <% LineItem.where(budget_id: @budget.id).each do |line_item| %>
+  <h6>Products:</h6>
+    Product: <h6><%= line_item.product.name %></h6>
+    Quantity: <strong><%= line_item.quantity %></strong>
+    Price: <strong><%= line_item.totalprice %></strong>
+    <br>
+  <% end %>
 </p>
 
 <%= link_to t('common.edit'), edit_budget_path(@budget) %> |
