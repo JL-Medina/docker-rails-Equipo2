@@ -69,9 +69,4 @@ class LineItemsController < ApplicationController
     def line_item_params
       params.require(:line_item).permit(:product_id, :quantity, :totalprice, budget_id)
     end
-    # def addition
-    #   quantity = :quantity
-    #   :float totalPrice
-    #   totalPrice = @line_item.product.price * quantity
-    # end
 end

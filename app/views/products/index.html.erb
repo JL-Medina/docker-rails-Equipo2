@@ -58,8 +58,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <td><%= link_to 'Add to budget', "#",onclick: "addProduct()" %></td>
+        <button type="button" class="btn btn-primary"><%= link_to 'Add to budget', "#",onclick: "addProduct()" %></button>
       </div>
     </div>
   </div>
@@ -95,8 +94,7 @@
     }
 
     $.get('/add_product', params, function(data){
-        console.log(data);
-        console.log("Producto agregado al presupuesto");
+        alert("Producto agregado al presupuesto");
     });
   }
 

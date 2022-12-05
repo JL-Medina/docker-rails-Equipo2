@@ -40,8 +40,8 @@ class BudgetsController < ApplicationController
       @budget = Budget.new(budget_params)
     end
     @line_item = LineItem.create(product_id: params[:product_id], totalprice: params[:price], quantity: params[:quantity], budget_id: @budget.id)
-    #redirect_to budget_path
-  end 
+    redirect_to budgets_path
+  end
     
   # PATCH/PUT /budgets/1 or /budgets/1.json
   def update
