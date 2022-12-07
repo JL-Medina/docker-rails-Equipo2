@@ -1,0 +1,150 @@
+.budget-card{
+    border: solid 1px #111;
+    margin: 0 auto;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 30px;
+}
+.mis-presupuestos{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 330px;
+}
+.txt-presupuesto{
+    margin: 0 auto;
+}
+.texto-presupuesto{
+    color: #111;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;    
+}
+.cuadro-busqueda{
+    display:flex;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 330px;
+    height: 44px;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: #696965 1px solid;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+.search-input{
+    border: none;
+    width: 100%;
+}
+.budget-top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+.tittle{
+    color: #111;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+}
+.budget-delete{
+    font-size: 12.8px;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+}
+.budget-delete:hover{
+    background-color: #fff;
+    color: red;
+}
+.date-info{
+    padding: 0.5rem;
+}
+.dates{
+    color: #696965;
+    padding-bottom: 0.5rem;
+    font-family: 'Barlow', sans-serif;
+}
+.budget-options{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.budget-share{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Barlow', sans-serif;
+}
+.budget-share:hover{
+    background-color: #fff;
+    color: #3860BE;
+}
+.budget-print:hover{
+    background-color: #fff;
+    color: #3860BE;
+}
+.budget-print{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Barlow', sans-serif;
+}
+.budget-middle{
+    padding: 0.5rem;
+    padding-bottom: 0px;
+}
+.product-quantity{
+    color: #696965;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Barlow', sans-serif;
+
+}
+.separador-budget{
+    width: 314px;
+    margin: 0 auto;
+    border-top: 1px solid #111;
+}
+.separador-button{
+    width: 314px;
+    margin: 0 auto;
+    border-top: 1px dashed #111;
+}
+.detail-button{
+    background-color:  #3860BE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-circle {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 0,
+  'opsz' 48
+}
+@media screen and (min-width : 360px) and (max-width:768px){
+    .budget-card{
+        width: 330px;
+        height: auto;
+    }
+    .budget-print{
+        display: none;
+    }
+    .detail-button{
+        height: 36px;
+    }
+ }
+ @media screen and (min-width : 769px){
+    .budget-card{
+        width: 1110px;
+        height: 192px;
+    }
+    .budget-options{
+        width: 414px;
+    }
+ }

@@ -1,38 +1,21 @@
-<p id="notice"><%= notice %></p>
 
-<h1><%=t('name_budget')%></h1>
+<%= render :partial => '/homes/header.html.erb' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Name</th>
-      <th>Expiration date</th>
-      <th>Create date</th>
-      <th>Quantity products</th>
-      <th>Total budget</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @budgets.each do |budget| %>
-      <tr>
-        <td><%= budget.user.name %></td>
-        <td><%= budget.name %></td>
-        <td><%= budget.expiration_date %></td>
-        <td><%= budget.create_date %></td>
-        <td><%= budget.quantity_products %></td>
-        <td><%= budget.total_budget %></td>
-        <td><%= link_to t('common.show'), budget %></td>
-        <td><%= link_to t('common.edit'), edit_budget_path(budget) %></td>
-        <td><%= link_to t('common.destroy'), budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
+<div class="mis-presupuestos">
+  <span class="material-symbols-outlined" style="font-size:1rem;font-weight:700;">arrow_back</span>
+  <div class="txt-presupuesto">
+  <p class="texto-presupuesto">MIS PRESUPUESTOS</p>
+  </div>
+</div>
+<div class="cuadro-busqueda">
+<input class="search-input" type="email" placeholder="Buscar" style="font-size:1rem;font-family: 'Barlow', sans-serif;color:#696965;font-weight:600;">
+<span class="material-symbols-outlined" style="color:#696965;">search</span>
+</div>
+<div>
 <%= link_to t('new.new_budget'), new_budget_path %>
+</div>
+
+
+<%= render :partial => 'budgetview.html.erb' %>
+
+<%= render :partial => '/homes/footer.html.erb' %>

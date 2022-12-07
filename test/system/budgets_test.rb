@@ -12,7 +12,7 @@ class BudgetsTest < ApplicationSystemTestCase
 
   test "creating a Budget" do
     visit budgets_url
-    click_on "New Budget"
+    click_on "Nuevo presupuesto"
 
     fill_in "Create date", with: @budget.create_date
     fill_in "Expiration date", with: @budget.expiration_date
