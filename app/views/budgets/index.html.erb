@@ -11,8 +11,12 @@
 <input class="search-input" type="email" placeholder="Buscar" style="font-size:1rem;font-family: 'Barlow', sans-serif;color:#696965;font-weight:600;">
 <span class="material-symbols-outlined" style="color:#696965;">search</span>
 </div>
-<div>
-<%= link_to t('new.new_budget'), new_budget_path %>
+<div class="new-filter">
+  <span class="add-circle material-symbols-outlined" style="color:#3860BE;">add_circle</span>
+    <div class="new-budget-button">
+    <%= link_to t('new.new_budget'), new_budget_path %>
+    </div>
+  <span class="material-symbols-outlined"  style="color:#3860BE;">tune</span>
 </div>
 
 

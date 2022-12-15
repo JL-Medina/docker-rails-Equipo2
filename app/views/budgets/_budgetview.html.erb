@@ -1,39 +1,39 @@
 <div class="budget-card">
     <% @budgets.each do |budget| %>
-    <div class="budget-top">
-        <p class="tittle">Presupuesto <%= budget.name %></p>
-        <a href="" class="budget-delete" style="color:red;"><%= link_to t('common.destroy'), budget, method: :delete, data: { confirm: 'Are you sure?' } %></a>
-    </div>
-    <div class="date-info">
-        <p class="dates">Creado : <%= budget.create_date %></p>
-        <p class="dates">Validez : <%= budget.expiration_date %></p>
-    </div>
-    <div class="budget-options">
-        <a href="" class="budget-share" style="color: #3860BE;"> 
-        <span class="material-symbols-outlined" style="color: #3860BE; width:10.8px;height:14.9px;margin-right:0.25rem;font-size:1rem;">ios_share</span>
-        compartir
-        </a>
-        <a href="" class="budget-print" style="color: #3860BE;">
-        <span class="material-symbols-outlined" style="color: #3860BE; width:13.33px;height:12px;margin-right:0.25rem;font-size:1rem;">print</span>
-        imprimir
-        </a>
-        <a href="" class="budget-share" style="color: #3860BE;">
-        <span class="material-symbols-outlined" style="color: #3860BE; width:10.67px;height:10.67px;margin-right:0.25rem;font-size:1rem;">download</span>
-        descargar
-        </a>
-    </div>
+        <div class="budget-top">
+            <p class="tittle">Presupuesto <%= budget.name %></p>
+            <a href="" class="budget-delete"><%= link_to t('common.destroy'), budget, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-budget-text', style: 'color: red; font-size: 16px;'  %></a>
+        </div>
+        <div class="date-info">
+            <p class="dates">Creado : <%= budget.create_date %></p>
+            <p class="dates">Validez : <%= budget.expiration_date %></p>
+        </div>
+        <div class="budget-options">
+            <a href="" class="budget-share" style="color: #3860BE;"> 
+            <span class="material-symbols-outlined" style="color: #3860BE; width:10.8px;height:14.9px;margin-right:0.25rem;font-size:1rem;">ios_share</span>
+            compartir
+            </a>
+            <a href="" class="budget-print" style="color: #3860BE;">
+            <span class="material-symbols-outlined" style="color: #3860BE; width:13.33px;height:12px;margin-right:0.25rem;font-size:1rem;">print</span>
+            imprimir
+            </a>
+            <a href="" class="budget-share" style="color: #3860BE;">
+            <span class="material-symbols-outlined" style="color: #3860BE; width:10.67px;height:10.67px;margin-right:0.25rem;font-size:1rem;">download</span>
+            descargar
+            </a>
+        </div>
 
-    <hr class="separador-budget">
+        <hr class="separador-budget">
 
-    <div class="budget-middle">
-        <p class="product-quantity">Cant. de Productos: 3</p>
-    </div>
+        <div class="budget-middle">
+            <p class="product-quantity">Cant. de Productos: 3</p>
+        </div>
 
-        <hr class="separador-button" style="padding-bottom:0.5rem;">
-    
-    <div class="detail-button">
-        <span class="add-circle material-symbols-outlined" style="color:white;">add_circle</span>
-        <p class="product-detail"><%= link_to  t('common.show'), budget,  :style => 'product-detail' %></p>
-    </div>
+            <hr class="separador-button" style="padding-bottom:0.5rem;">
+        
+        <div class="detail-button">
+            <span class="add-circle material-symbols-outlined" style="color:white;">add_circle</span>
+            <p class="product-detail"><%= link_to  t('common.show'), budget,  :class => 'product-detail',  style: 'color: #fff;'%></p>
+        </div>
     <% end %>
 </div>

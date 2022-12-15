@@ -120,6 +120,18 @@
     justify-content: center;
 }
 
+.translation_missing{
+    color: #3860BE;
+    font-size: 1rem;
+    font-family: 'Barlow', sans-serif;
+}
+.translation_missing:hover{
+    color: #3860BE;
+    background-color: #FFF;
+}
+.material-symbols-outlined{
+    fill: 0;
+}
 .add-circle {
   font-variation-settings:
   'FILL' 0,
@@ -127,6 +139,12 @@
   'GRAD' 0,
   'opsz' 48
 }
+.product-detail:hover{
+    background-color: #3860BE;
+    color: #FFF;
+    text-decoration: none;
+}
+
 @media screen and (min-width : 360px) and (max-width:768px){
     .budget-card{
         width: 330px;
@@ -138,13 +156,57 @@
     .detail-button{
         height: 36px;
     }
+    .new-budget-button{
+        width: 330px;
+    }
+    .mis-presupuestos{
+        width: 330px;
+    }
+    .cuadro-busqueda{
+        width: 330px;
+    }
+    .new-filter{
+        display: flex;
+        width: 330px;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+    }
  }
  @media screen and (min-width : 769px){
     .budget-card{
         width: 1110px;
         height: 192px;
+        margin-bottom: 3rem;
+        max-width: 1110px;
+        height: auto;
     }
     .budget-options{
         width: 414px;
+    }
+    .separador-button{
+        width: 1094px;
+    }
+    .separador-budget{
+        width: 1094px;
+    }
+    .cuadro-busqueda{
+        margin-bottom: 20px;
+    }
+    .new-budget-button{
+        width: 920px;
+    }
+    .mis-presupuestos{
+        width: 920px;
+    }
+    .cuadro-busqueda{
+        width: 920px;
+    }
+    .new-filter{
+        width: 920px;
+        height: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 72px;
     }
  }

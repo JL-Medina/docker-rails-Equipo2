@@ -28,6 +28,7 @@
             <p class='user-data-info'>Calle Falsa 123<p>
             <td><%= link_to t('common.edit'), edit_user_path(user), class: 'edit-button', style: 'color: white; font-size: 16px' %></td>
             <% end %>
+            <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete,  :class => 'logout', :style => 'color: white'   %>
         </div>
 </div>
 
@@ -36,65 +37,67 @@
             <button class="dropbtn"> 
                 <p class='droptitle'>Mis presupuestos<p></p>
                 <span class="material-symbols-outlined">keyboard_arrow_down</span>
-            </button>  
-            <div class="dropdown-content">
-                <div class="content-top">
-                    <p class="contenttittle">Nombre</p>
-                    <p class="contenttittle">Fecha</p>
-                    <p class="contenttittle">Estado</p>
-                    <p class="contenttittle">Total</p>
-                </div>
-            </div>
-            <div class="dropdown-content2">
-                <div class="content-label">
-                    <div class="content">
-                        <p class="contentdata">asd</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata-date">20-04-2022 </p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">Activo</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">$320.333</p>
+            </button> 
+            <div class="content-contenedor">
+                <div class="dropdown-content" >
+                    <div class="content-top">
+                        <p class="contenttittle">Nombre</p>
+                        <p class="contenttittle">Fecha</p>
+                        <p class="contenttittle">Estado</p>
+                        <p class="contenttittle">Total</p>
                     </div>
                 </div>
-                <div class="content-label">
-                    <div class="content">
-                        <p class="contentdata">ID/Num presupuesto</p>
+                    <div class="dropdown-content2" >
+                        <div class="content-label">
+                            <div class="content">
+                                <p class="contentdata">asd</p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata-date">20-04-2022 </p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata">Activo</p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata">$320.333</p>
+                            </div>
+                        </div>
+                        <div class="content-label">
+                            <div class="content">
+                                <p class="contentdata">ID/Num presupuesto</p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata-date">20-04-2022 </p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata">Activo</p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata">$320.333</p>
+                            </div>
+                        </div>
+                        <div class="content-label">
+                            <div class="content">
+                                <p class="contentdata">ID/Num presupuesto</p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata-date">20-04-2022 </p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata">Activo</p>
+                            </div>
+                            <div class="content">
+                                <p class="contentdata">$320.333</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content">
-                        <p class="contentdata-date">20-04-2022 </p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">Activo</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">$320.333</p>
-                    </div>
-                </div>
-                <div class="content-label">
-                    <div class="content">
-                        <p class="contentdata">ID/Num presupuesto</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata-date">20-04-2022 </p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">Activo</p>
-                    </div>
-                    <div class="content">
-                        <p class="contentdata">$320.333</p>
-                    </div>
-                </div>
             </div>
         </div>
-            <div class="dropdown">
-                <button class="dropbtn"> 
+        <div class="dropdown">
+            <button class="dropbtn"> 
                 <p class='droptitle'>Mis presupuestos<p></p>
                 <span class="material-symbols-outlined">keyboard_arrow_down</span>
-                </button>
+            </button>
                 <div class="dropdown-content">
                     <button class="tarjeta" type="button">
                         <div class='card-info'>
@@ -107,11 +110,16 @@
                             <span class="material-symbols-outlined">credit_card</span>
                             <p class="IDtarjeta"> **** 2657 Debito</p></div>
                         <span class="material-symbols-outlined">keyboard_arrow_right</span>
-                    </button>
+            </button>
                 </div>
-            </div>
+        </div>
 </div>
 </div>
 
 
 <%= render :partial => '/homes/footer.html.erb' %>
+
+
+<script>
+
+</script>
